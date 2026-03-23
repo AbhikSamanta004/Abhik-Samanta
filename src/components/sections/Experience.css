@@ -1,0 +1,91 @@
+/* ── EXPERIENCE ── */
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 44px;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.exp-card:hover {
+  border-color: var(--border-accent);
+}
+
+.exp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--grad);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.exp-role {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.exp-badge {
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  color: #a5b4fc;
+  font-weight: 500;
+  white-space: nowrap;
+  font-family: 'DM Mono', monospace;
+}
+
+.exp-list {
+  list-style: none;
+}
+
+.exp-list li {
+  padding: 11px 0 11px 24px;
+  position: relative;
+  color: var(--muted2);
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.exp-list li:last-child {
+  border-bottom: none;
+}
+
+.exp-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.exp-list .hl {
+  color: var(--text);
+  font-weight: 600;
+}

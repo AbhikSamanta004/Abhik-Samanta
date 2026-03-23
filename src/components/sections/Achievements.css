@@ -1,0 +1,40 @@
+/* ── ACHIEVEMENTS ── */
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.ach-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.ach-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+}
+
+.ach-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.ach-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.ach-desc {
+  font-size: 0.83rem;
+  color: var(--muted2);
+  line-height: 1.7;
+}

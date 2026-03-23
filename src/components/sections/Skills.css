@@ -1,0 +1,51 @@
+/* ── SKILLS ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 16px;
+}
+
+.sk-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.sk-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sk-icon {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.sk-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.sk-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.stag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 6px;
+  padding: 4px 11px;
+  font-size: 0.76rem;
+  color: var(--muted2);
+  font-weight: 500;
+}

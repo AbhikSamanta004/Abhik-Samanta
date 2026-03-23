@@ -1,0 +1,281 @@
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 6% 60px 6%;
+  gap: 4rem;
+}
+
+.hero-left {
+  flex: 1;
+  max-width: 620px;
+}
+
+/* Eyebrow badge */
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 100px;
+  padding: 6px 16px;
+  margin-bottom: 1.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+}
+
+.hero-eyebrow .pulse {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6366f1;
+  box-shadow: 0 0 8px #6366f1;
+  animation: pulse 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Name */
+.hero-name {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-name .grad {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-role {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 500;
+  color: var(--muted2);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--muted2);
+  line-height: 1.85;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+/* Action buttons */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: none;
+  transition: all 0.2s;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 40px rgba(99, 102, 241, 0.55);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  padding: 13px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Stats row */
+.stats-row {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(13, 18, 32, 0.8);
+  backdrop-filter: blur(12px);
+  max-width: 520px;
+}
+
+.stat-item {
+  flex: 1;
+  padding: 18px 20px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-n {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.stat-l {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── HERO RIGHT — Photo ── */
+.hero-right {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: -2%;
+}
+
+.photo-container {
+  position: relative;
+  width: 360px;
+  height: 360px;
+}
+
+.photo-ring-outer {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #6366f1, #8b5cf6, #06b6d4, #6366f1);
+  animation: spin 10s linear infinite;
+  padding: 2px;
+}
+
+.photo-ring-inner {
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.photo-img {
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+  background: #000;
+}
+
+.photo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center 15%;  /* change from "center bottom" to this */
+  filter: contrast(1.02) saturate(1.05);
+}
+.photo-glow {
+  position: absolute;
+  inset: -60px;
+  border-radius: 50%;
+  z-index: 0;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Floating badges */
+.fbadge {
+  position: absolute;
+  z-index: 5;
+  background: rgba(13, 18, 32, 0.95);
+  border: 1px solid var(--border-accent);
+  border-radius: 10px;
+  padding: 9px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text);
+  backdrop-filter: blur(16px);
+  white-space: nowrap;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.fb1 { top: 16px; right: -24px; animation: fbob 4s ease-in-out infinite; }
+.fb2 { bottom: 72px; right: -30px; animation: fbob 4s ease-in-out infinite; animation-delay: -1.5s; }
+.fb3 { bottom: 16px; left: -30px; animation: fbob 4s ease-in-out infinite; animation-delay: -3s; }
+.fb4 { top: 80px; left: -36px; animation: fbob 4s ease-in-out infinite; animation-delay: -2s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  #hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 120px;
+  }
+
+  .hero-actions { justify-content: center; }
+  .stats-row { max-width: 100%; }
+  .hero-desc { margin: 0 auto 2.5rem; }
+  .hero-right { order: -1; }
+  .photo-container { width: 240px; height: 240px; }
+  .fb1, .fb2, .fb3, .fb4 { display: none; }
+}
+
+/* Photo fallback when image is missing */
+.photo-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  font-size: 4rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.03em;
+  border-radius: 50%;
+}
+.fb5 { top: 150px; right: -36px; animation: fbob 4s ease-in-out infinite; animation-delay: -0.5s; }
+.fb6 { bottom: 140px; left: -44px; animation: fbob 4s ease-in-out infinite; animation-delay: -2.5s; }

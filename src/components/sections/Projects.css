@@ -1,0 +1,120 @@
+/* ── PROJECTS ── */
+.proj-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.proj-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: start;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.proj-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.proj-num {
+  position: absolute;
+  top: 28px;
+  right: 36px;
+  font-family: 'DM Mono', monospace;
+  font-size: 4rem;
+  font-weight: 500;
+  background: var(--grad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.07;
+  user-select: none;
+  line-height: 1;
+}
+
+.proj-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.proj-desc {
+  color: var(--muted2);
+  font-size: 0.93rem;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.ptag {
+  background: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.18);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 0.76rem;
+  color: #67e8f9;
+  font-weight: 500;
+}
+
+.proj-links {
+  display: flex;
+  gap: 10px;
+}
+
+.plbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.plbtn.solid {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.plbtn.solid:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.plbtn.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.plbtn.ghost:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .proj-card {
+    grid-template-columns: 1fr;
+  }
+}

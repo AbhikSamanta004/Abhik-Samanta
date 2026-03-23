@@ -1,0 +1,152 @@
+/* ── CONTACT ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.clink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 22px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.25s;
+}
+
+.clink:hover {
+  border-color: var(--border-accent);
+  transform: translateX(6px);
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.clink-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.clink-label {
+  font-size: 0.73rem;
+  color: var(--muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.clink-val {
+  font-size: 0.92rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+/* ── FORM ── */
+.form-head {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.form-sub {
+  color: var(--muted2);
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 1rem;
+}
+
+.frow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.fg {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fg label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fg input,
+.fg textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+
+.fg input:focus,
+.fg textarea:focus {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.fg input::placeholder,
+.fg textarea::placeholder {
+  color: var(--muted);
+}
+
+.submit-btn {
+  width: 100%;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all 0.2s;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.35);
+  letter-spacing: 0.02em;
+}
+
+.submit-btn:hover {
+  background: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 40px rgba(99, 102, 241, 0.5);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

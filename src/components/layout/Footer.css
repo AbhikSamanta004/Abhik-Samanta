@@ -1,0 +1,32 @@
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: rgba(8, 12, 20, 0.9);
+}
+
+.foot-copy {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.foot-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.foot-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  transition: color 0.2s;
+}
+
+.foot-links a:hover {
+  color: var(--text);
+}
